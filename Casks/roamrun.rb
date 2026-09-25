@@ -1,6 +1,6 @@
 cask "roamrun" do
-  version "0.1.1"
-  sha256 "71adce1951deb83ba7f91c5272e6cdfc1c5769fd8bab52a5553dccbc1fd01353"
+  version "0.1.2"
+  sha256 "7c674e7fb04dbbbfc47e5825304d2d72848c5b62921b3a2641e24361b7b494b0"
 
   url "https://github.com/mh-mobile/RoamRun/releases/download/v#{version}/RoamRun-#{version}.dmg"
   name "RoamRun"
@@ -12,6 +12,7 @@ cask "roamrun" do
     strategy :github_latest
   end
 
+  depends_on arch: :arm64
   depends_on macos: :ventura
 
   app "RoamRun.app"
