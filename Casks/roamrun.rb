@@ -26,8 +26,8 @@ cask "roamrun" do
   ]
 
   caveats <<~EOS
-    RoamRun is not notarized. macOS blocks it on first launch and after each
-    upgrade: open it once, then allow it in
+    RoamRun is not notarized. macOS blocks it on first launch: open it once,
+    then allow it in
       System Settings → Privacy & Security → Open Anyway
   EOS
 end
