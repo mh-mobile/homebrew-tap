@@ -12,7 +12,7 @@ cask "roamrun" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "RoamRun.app"
   binary "#{appdir}/RoamRun.app/Contents/MacOS/RoamRun", target: "roamrun"
