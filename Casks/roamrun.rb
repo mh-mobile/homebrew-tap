@@ -1,6 +1,6 @@
 cask "roamrun" do
-  version "0.1.11"
-  sha256 "ed7f57dffe26fd72f33d65996ff5c4af0d8b25a2e45d20894d56ffeb137abb89"
+  version "0.1.12"
+  sha256 "fd6fadacad14f4062969b335346e4a7dc867faa908be3f9f554574af8add6ad9"
 
   url "https://github.com/mh-mobile/RoamRun/releases/download/v#{version}/RoamRun-#{version}.dmg"
   name "RoamRun"
@@ -18,17 +18,15 @@ cask "roamrun" do
   app "RoamRun.app"
   binary "#{appdir}/RoamRun.app/Contents/MacOS/RoamRun", target: "roamrun"
 
-  uninstall quit: "com.roamrun.app"
+  uninstall quit: [
+    "com.roamrun.app",
+    "io.github.mh-mobile.roamrun",
+  ]
 
   zap trash: [
     "~/Library/Application Support/RoamRun",
     "~/Library/Logs/RoamRun",
     "~/Library/Preferences/com.roamrun.app.plist",
+    "~/Library/Preferences/io.github.mh-mobile.roamrun.plist",
   ]
-
-  caveats <<~EOS
-    RoamRun is not notarized. macOS blocks it on first launch: open it once,
-    then allow it in
-      System Settings → Privacy & Security → Open Anyway
-  EOS
 end
