@@ -1,6 +1,6 @@
 cask "roamrun" do
-  version "0.1.18"
-  sha256 "28abef8578baa3f167055adb547e3e38dc944b46072a2ab8b4d19fbfa86dfee7"
+  version "0.1.19"
+  sha256 "9087dc9b167261e9785f8de483f33c42ba7e7bfeeb276d3f73bf4bd200b82f36"
 
   url "https://github.com/mh-mobile/RoamRun/releases/download/v#{version}/RoamRun-#{version}.dmg"
   name "RoamRun"
