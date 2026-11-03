@@ -1,8 +1,8 @@
 class Roamrunctl < Formula
   desc "Holds an iPhone's pairing and uses it over Tailscale; introduces a far Mac"
   homepage "https://github.com/mh-mobile/RoamRun"
-  url "https://github.com/mh-mobile/RoamRun/archive/refs/tags/v0.11.1.tar.gz"
-  sha256 "6244a53dea1f64c8ebe2f79c0a86e2dbd678ee0acc2b03eb5413c3a60deb7482"
+  url "https://github.com/mh-mobile/RoamRun/archive/refs/tags/v0.12.0.tar.gz"
+  sha256 "fadf278ca71ee22b92685e43998f1c33e635ed46c1419644ad3b27922a62c280"
   license "MIT"
   head "https://github.com/mh-mobile/RoamRun.git", branch: "main"
 
