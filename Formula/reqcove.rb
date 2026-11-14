@@ -1,8 +1,8 @@
 class Reqcove < Formula
   desc "Hand an iPhone's HTTP(S) traffic to an AI agent, over a Tailscale exit node"
   homepage "https://github.com/mh-mobile/reqcove"
-  url "https://github.com/mh-mobile/reqcove/archive/refs/tags/v0.6.0.tar.gz"
-  sha256 "e9992c0ec90872e8aaf6acbc5634def9d886c0638bbc27b2cf7fd1817d468918"
+  url "https://github.com/mh-mobile/reqcove/archive/refs/tags/v0.7.0.tar.gz"
+  sha256 "c5243985ba2cbc7f4731e4c2b94b049acd0fc62088864fb2a7c39d2e0718b5d8"
   license "MIT"
 
   depends_on "go" => :build
@@ -17,11 +17,9 @@ class Reqcove < Formula
       The first `reqcove run` fetches mitmproxy and Python with uv.
       State, including a CA private key, lives in ~/.reqcove.
 
-      To keep it running at login (`brew services start reqcove`), write run's
-      flags, one a line, in #{etc}/reqcove/config (mkdir -p #{etc}/reqcove;
-      chmod 600 the file), such as:
-        --device iphone
-        --allow-hosts api.example.com
+      To keep it running at login: `reqcove setup` (in your terminal) asks
+      for the device and the hosts and writes #{etc}/reqcove/config,
+      the file the service reads; then `brew services start reqcove`.
       `reqcove links` prints the login URL; the log is #{var}/log/reqcove.log.
     EOS
   end
